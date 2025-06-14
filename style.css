@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #e8e8e8;
+    color: #222;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.header-dark {
+    background-color: #000;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.header-dark h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 24px;
+}
+
+.intro {
+    text-align: center;
+    margin-top: -50px;
+    margin-bottom: 50px;
+}
+
+.intro h2 {
+    font-size: 24px;
+    margin: 10px 0 10px;
+}
+
+.intro p {
+    font-size: 16px;
+    color: #444;
+    margin: 0;
+}
+
+
+/* Layout tool-box secara vertikal */
+
+.tool-column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    /* Jarak antar box */
+    margin-top: 30px;
+}
+
+.tool-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tool-box h3 {
+    margin: 5px 0 15px;
+    font-size: 20px;
+}
+
+.tool-box p {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+}
+
+.tool-box label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.input-container {
+    position: relative;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[readonly] {
+    background-color: #f9f9f9;
+    cursor: not-allowed;
+}
+
+button.generate-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button.clear-btn {
+    position: absolute;
+    right: 10px;
+    top: 45%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #f44336;
+    /* Merah untuk tombol clear */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.output-box {
+    margin-top: 20px;
+    background: #f5f5f5;
+    border-radius: 6px;
+    padding: 10px 15px;
+    text-align: center;
+    position: relative;
+}
+
+.base64-text {
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+    word-break: break-all;
+}
+
+button.copy-btn {
+    margin-top: 10px;
+    padding: 6px 14px;
+    font-size: 13px;
+    cursor: pointer;
+    border: none;
+    background-color: #ddd;
+    border-radius: 4px;
+}
+
+#copySuccess {
+    margin-top: 6px;
+    font-size: 12px;
+}
+
+.faq-section {
+    margin-top: 80px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.faq-section h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.faq-section .tool-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.faq-section .tool-box {
+    flex: 1 1 30%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    min-width: 250px;
+}
+
+
+/* Responsif untuk layar kecil */
+
+@media (max-width: 768px) {
+    .tool-box {
+        flex: 1 1 100%;
+    }
+    .tool-grid,
+    .tool-column {
+        flex-direction: column;
+    }
+}
